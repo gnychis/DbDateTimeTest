@@ -37,8 +37,8 @@ namespace DbDateTimeTest
             // Check the database version
             MyClasse dbItem = db.MyClasses.FirstOrDefault();
             Console.WriteLine("DB Item:");
-            Console.WriteLine("  * Original: " + original.dateTime.ToString());
-            Console.WriteLine("  * DB Item: " + dbItem.dateTime.ToString());
+            Console.WriteLine("  * Original: " + original.dateTime.ToString() + " ... Milliseconds: " + original.dateTime.Millisecond);
+            Console.WriteLine("  * DB Item: " + dbItem.dateTime.ToString() + " ... Milliseconds: " + dbItem.dateTime.Millisecond);
             Console.WriteLine("  * Equal? " + dbItem.dateTime.Equals(original.dateTime));
 
             Console.ReadLine();
